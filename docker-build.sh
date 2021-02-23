@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]
 then
-  TAG=latest
+  TAG=v3
 else
   TAG=$1
 fi
