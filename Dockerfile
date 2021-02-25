@@ -17,6 +17,7 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT ; \
 COPY lib/catalina.properties /usr/local/tomcat/conf/
 COPY lib/tomcat.sh /usr/local/tomcat/
 COPY lib/wait-for-it /usr/bin/
+COPY lib/server.xml /usr/local/tomcat/conf/
 
 EXPOSE 8080
 
