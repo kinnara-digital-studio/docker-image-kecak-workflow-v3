@@ -1,10 +1,6 @@
-FROM tomcat:9.0.27-jdk8-openjdk
+FROM tomcat:9-jdk8-openjdk
 
 # install cron and Git LFS
-RUN apt-get update && apt-get -y install cron sudo curl git wget lsb-release && \
-    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
-    sudo apt-get install git-lfs && \
-    mkdir -p /src
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
