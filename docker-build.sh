@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#JAVA_OPTS=-Xmx2G -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000
+
 if [ -z "$1" ]
 then
   TAG=v3

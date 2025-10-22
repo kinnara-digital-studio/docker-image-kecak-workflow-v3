@@ -1,4 +1,4 @@
-FROM tomcat:9-jdk8-openjdk
+FROM tomcat:9.0.93-jdk11
 
 # install cron and Git LFS
 
@@ -20,8 +20,9 @@ COPY lib/wait-for-it /usr/bin/
 # COPY sql-script /usr/local/tomcat/sql-script
 
 EXPOSE 8080
+EXPOSE 8000
 
 ENV JAVA_OPTS=${JAVA_OPTS}
-ENV TOMCAT_DEBUG=${TOMCAT_DEBUG}
+#ENV TOMCAT_DEBUG=${TOMCAT_DEBUG}
 
-CMD ["/usr/local/tomcat/tomcat.sh", "run"]
+CMD ["/usr/local/tomcat/tomcat.sh", "start"]
